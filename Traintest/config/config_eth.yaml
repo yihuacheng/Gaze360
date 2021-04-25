@@ -1,0 +1,57 @@
+---
+train:
+  params:
+    batch_size: 80
+    epoch: 20
+    lr: 0.0001
+    decay: 1
+    decay_step: 5000
+    loss: Pinball
+  save:
+    save_path: "/home/cyh/GazeBenchmark/exp/Implementation/Gaze360-eth"
+    model_name: Gaze360
+    step: 4
+  data:
+    image: "/home/cyh/GazeDataset20200519/FaceBased/ETH-Gaze/Image/train"
+    label: "/home/cyh/GazeDataset20200519/FaceBased/ETH-Gaze/Label/train_temp.label"
+  pretrains: "None"
+
+valid:
+   load:
+      begin_step: 4
+      end_step: 20
+      steps: 4
+      load_path: "/home/cyh/GazeBenchmark/exp/Implementation/Gaze360-eth"
+      model_name: Gaze360
+   data:
+      image: "/home/cyh/GazeDataset20200519/FaceBased/ETH-Gaze/Image/train"
+      label: "/home/cyh/GazeDataset20200519/FaceBased/ETH-Gaze/Label/test_temp.label"
+
+test:
+   load:
+      begin_step: 20
+      end_step: 20
+      steps: 4
+      load_path: "/home/cyh/GazeBenchmark/exp/Implementation/Gaze360-eth"
+      model_name: Gaze360
+   data:
+      image: "/home/cyh/GazeDataset20200519/FaceBased/ETH-Gaze/Image/test"
+      label: "/home/cyh/GazeDataset20200519/FaceBased/ETH-Gaze/Label/test.label"
+cross:
+  save_name: cross-mpii-new
+  load:
+      begin_step: 16
+      end_step: 16
+      steps: 4
+      load_path: "/home/cyh/GazeBenchmark/exp/Implementation/Gaze360-eth"
+      load_name: False
+      model_name: Gaze360
+  data:
+      image: "/home/cyh/GazeDataset20200519/FaceBased/MPIIFaceGaze/Image"
+      label: "/home/cyh/GazeDataset20200519/FaceBased/MPIIFaceGaze/Label"
+
+# image: "/home/cyh/GazeDataset20200519/FaceBased/EyeDiap/Image"
+# label: "/home/cyh/GazeDataset20200519/FaceBased/EyeDiap/ClusterLabel"
+
+reader: reader_eth
+device: 2

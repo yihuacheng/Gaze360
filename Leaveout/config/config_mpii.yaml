@@ -1,0 +1,28 @@
+---
+train:
+  params:
+    batch_size: 80
+    epoch: 60
+    lr: 0.0001
+    decay: 1
+    decay_step: 5000
+    loss: Pinball
+  save:
+    save_path: "/home/cyh/GazeBenchmark/exp/Implementation/Gaze360-mpii"
+    model_name: Gaze360
+    step: 10
+  data:
+    image: "/home/cyh/GazeDataset20200519/FaceBased/MPIIFaceGaze/Image"
+    label: "/home/cyh/GazeDataset20200519/FaceBased/MPIIFaceGaze/Label"
+  pretrains: "None"
+test:
+   load:
+      begin_step: 60
+      end_step: 60
+      steps: 10
+      load_path: "/home/cyh/GazeBenchmark/exp/Implementation/Gaze360-mpii"
+      model_name: Gaze360
+   data:
+      image: "/home/cyh/GazeDataset20200519/FaceBased/MPIIFaceGaze/Image"
+      label: "/home/cyh/GazeDataset20200519/FaceBased/MPIIFaceGaze/Label"
+reader: reader_mpii
