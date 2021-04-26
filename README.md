@@ -1,5 +1,6 @@
 # Gaze360
 The Pytorch Implementation of "Gaze360: Physically Unconstrained Gaze Estimation in the Wild". (updated in 2021/04/25)
+
 Note that, we just use the static model for estimating gaze from images rather videos.
 
 This is the implemented version metioned in our survey **"Appearance-based Gaze Estimation With Deep Learning: A Review and Benchmark"**.
