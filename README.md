@@ -1,5 +1,5 @@
 # Gaze360
-The Pytorch Implementation of "Gaze360: Physically Unconstrained Gaze Estimation in the Wild". (updated in 2021/04/25)
+The Pytorch Implementation of "Gaze360: Physically Unconstrained Gaze Estimation in the Wild". (updated in 2021/04/28)
 
 
 
