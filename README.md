@@ -6,7 +6,7 @@ The Pytorch Implementation of "Gaze360: Physically Unconstrained Gaze Estimation
 We build benchmarks for gaze estimation in our survey [**"Appearance-based Gaze Estimation With Deep Learning: A Review and Benchmark"**](https://arxiv.org/abs/2104.12668).
 This is the implemented code of the "Gaze360" method in our benchmark. Please refer our survey for more details.
 
-We recommend you to use **data processing codes** provided in <a href="http://phi-ai.org/GazeHub/" target="_blank">*GazeHub*</a>.
+We recommend you to use **data processing codes** provided in <a href="http://phi-ai.buaa.edu.cn/Gazehub/" target="_blank">*GazeHub*</a>.
 You can direct run the method' code using the processed dataset.
 
 ## Links to gaze estimation codes.
